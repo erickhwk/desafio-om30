@@ -1,0 +1,37 @@
+<h1>Municipes</h1>
+
+<%= link_to 'New Municipe', new_municipe_path %>
+
+<div>
+  <table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>CPF</th>
+      <th>CNS</th>
+      <th>Email</th>
+      <th>Birthdate</th>
+      <th>Phone</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @municipes.each do |municipe| %>
+      <tr>
+        <td><%= municipe.id %></td>
+        <td><%= municipe.name %></td>
+        <td><%= municipe.cpf %></td>
+        <td><%= municipe.cns %></td>
+        <td><%= municipe.email %></td>
+        <td><%= municipe.birth_date %></td>
+        <td><%= municipe.phone %></td>
+        <td><%= municipe.status %></td>
+        <td><%= link_to "🖉", edit_municipe_path(municipe.id) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</div>
