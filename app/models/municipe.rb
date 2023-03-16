@@ -9,6 +9,8 @@ class Municipe < ApplicationRecord
   validate :validate_birth_date
   validate :validate_cns
 
+  mount_uploader :photo, PhotoUploader
+
   private
 
   def validate_cns

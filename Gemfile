@@ -58,3 +58,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'simple_form'
 gem "validators"
 gem 'cpf_cnpj'
+gem 'carrierwave', '>= 3.0.0.beta', '< 4.0'
