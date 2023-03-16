@@ -23,7 +23,7 @@
         <td><%= municipe.cpf %></td>
         <td><%= municipe.cns %></td>
         <td><%= municipe.email %></td>
-        <td><%= municipe.birth_date %></td>
+        <td><%= municipe.birth_date.strftime('%d/%m/%Y') %></td>
         <td><%= municipe.phone %></td>
         <td><%= municipe.status %></td>
         <td><%= link_to "🖉", edit_municipe_path(municipe.id) %></td>

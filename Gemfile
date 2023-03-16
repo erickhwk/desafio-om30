@@ -59,3 +59,4 @@ gem 'simple_form'
 gem "validators"
 gem 'cpf_cnpj'
 gem 'carrierwave', '>= 3.0.0.beta', '< 4.0'
+gem 'validates-correios-cep'
