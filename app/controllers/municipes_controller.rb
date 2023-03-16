@@ -9,6 +9,7 @@ class MunicipesController < ApplicationController
 
   def new
     @municipe = Municipe.new
+    @municipe.build_address
   end
 
   def create
@@ -36,6 +37,14 @@ class MunicipesController < ApplicationController
 
   def municipe_params
     params.require(:municipe).permit(:name, :cpf, :cns, :email, :birth_date,
-                                     :phone, :photo, :status)
+                                     :phone, :photo, :status,
+                                     address_attributes: %i[id
+                                                            zipcode
+                                                            street
+                                                            complement
+                                                            district
+                                                            city
+                                                            state
+                                                            ibge_code])
   end
 end

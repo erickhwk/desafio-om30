@@ -1,0 +1,27 @@
+<%= simple_form_for @municipe do |f| %>
+  <%= f.input :name %>
+  <%= f.input :cpf %>
+  <%= f.input :cns %>
+  <%= f.input :email %>
+  <%= f.input :birth_date, as: :date, html5: true %>
+  <%= f.input :phone %>
+  <%= image_tag "#{@municipe.photo_url(:thumb)}" %>
+  <%= f.file_field :photo %>
+
+  <%= f.simple_fields_for :address do |a| %>
+    <%= a.input :zipcode %>
+    <%= a.input :street %>
+    <%= a.input :complement %>
+    <%= a.input :district %>
+    <%= a.input :city %>
+    <%= a.input :state, collection: ['AC','AL','AP','AM','BA','CE','DF','ES',
+                                        'GO','MA','MS','MT','MG','PA','PB','PR',
+                                        'PE','PI','RJ','RN','RS','RO','RR','SC',
+                                        'SP','SE','TO']
+                                        %>
+    <%= a.input :ibge_code %>
+  <% end %>
+
+  <%= f.input :status, collection: ['active', 'inactive'], selected: 'active'  %>
+  <%= f.button :submit %>
+<% end %>
