@@ -17,11 +17,7 @@
     <%= a.input :complement %>
     <%= a.input :district %>
     <%= a.input :city %>
-    <%= a.input :state, collection: ['AC','AL','AP','AM','BA','CE','DF','ES',
-                                        'GO','MA','MS','MT','MG','PA','PB','PR',
-                                        'PE','PI','RJ','RN','RS','RO','RR','SC',
-                                        'SP','SE','TO']
-                                        %>
+    <%= a.input :state, collection: Address::STATES_ARRAY %>
     <%= a.input :ibge_code %>
   <% end %>
 
