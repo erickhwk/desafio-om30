@@ -35,5 +35,6 @@
 yarn-debug.log*
 .yarn-integrity
 
-# Ignore develop uploads
+# Ignore uploads
 /public/uploads/municipe/photo/*
+/public/uploads/municipe/tmp/*

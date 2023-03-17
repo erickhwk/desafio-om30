@@ -1,14 +1,17 @@
 <%= simple_form_for @municipe do |f| %>
+  <h3>Personal data</h3>
   <%= f.input :name %>
   <%= f.input :cpf %>
   <%= f.input :cns %>
   <%= f.input :email %>
   <%= f.input :birth_date, as: :date, html5: true %>
   <%= f.input :phone %>
+  <h3>Upload photo</h3>
   <%= image_tag "#{@municipe.photo_url(:thumb)}" %>
   <%= f.file_field :photo %>
 
   <%= f.simple_fields_for :address do |a| %>
+    <h3>Address</h3>
     <%= a.input :zipcode %>
     <%= a.input :street %>
     <%= a.input :complement %>
@@ -23,5 +26,6 @@
   <% end %>
 
   <%= f.input :status, collection: ['active', 'inactive'], selected: 'active'  %>
+  <%= link_to 'Back', municipes_path, class: 'btn-back' %>
   <%= f.button :submit %>
 <% end %>

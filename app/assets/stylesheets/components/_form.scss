@@ -1,0 +1,38 @@
+input {
+  width: 15rem;
+  display: inline;
+  padding: .85rem;
+  border: none;
+
+}
+
+input.btn {
+  margin-top: 1.5rem;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  font-weight: var(--bold);
+}
+
+label {
+  width: 8rem;
+  display: inline-block;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-weight: var(--bold);
+}
+
+select {
+  padding: .85rem;
+  border: none;
+}
+
+abbr {
+  color: var(--emphasis-color);
+  font-weight: var(--bold);
+}
+
+span.error {
+  font-size: var(--small);
+  color: var(--emphasis-color);
+  margin-left: 1rem;
+}
