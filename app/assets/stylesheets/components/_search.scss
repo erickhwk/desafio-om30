@@ -1,0 +1,15 @@
+.search-bar {
+  input {
+    display: inline;
+    padding: .85rem;
+    border: none;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+  }
+
+  #q_name_or_cpf_or_cns_or_address_zipcode_or_address_district_or_address_city_or_address_state_or_address_ibge_code_cont {
+    width: 25rem;
+    background-color: var(--light-color);
+    color: var(--text-color);
+  }
+}

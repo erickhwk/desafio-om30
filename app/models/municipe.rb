@@ -31,4 +31,12 @@ class Municipe < ApplicationRecord
 
     errors.add(:birth_date, 'it cannot be in the future') if birth_date > Time.now
   end
+
+  def self.ransackable_associations(auth_object = nil)
+    ["address"]
+  end
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["birth_date", "cns", "cpf", "created_at", "email", "id", "name", "phone", "photo", "status", "updated_at"]
+  end
 end
