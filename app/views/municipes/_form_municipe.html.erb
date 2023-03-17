@@ -1,4 +1,4 @@
-<%= simple_form_for @municipe do |f| %>
+<%= simple_form_for @municipe, html: { class: 'municipe-form' } do |f| %>
   <h3>Personal data</h3>
   <%= f.input :name %>
   <%= f.input :cpf %>

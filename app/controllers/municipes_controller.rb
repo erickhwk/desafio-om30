@@ -4,7 +4,8 @@ class MunicipesController < ApplicationController
   before_action :set_municipe, only: %i[show edit update]
 
   def index
-    @municipes = Municipe.all
+    @q = Municipe.ransack(params[:q])
+    @municipes = @q.result(distinct: true)
   end
 
   def show; end
