@@ -45,10 +45,21 @@ Backend:
 Tools: 
 - [x] Ruby, Ruby on Rails e Postgres são obrigatórios; 
 - [ ] Elasticsearch/Kafka (opcional, plus); 
-- [x] Utilize ActionView, porém, AssetPipeline/Sprockets ou uma abordagem SPA junto ao rails; 
+- [x] Utilize ActionView, porém, AssetPipeline/Sprockets ou uma abordagem SPA junto ao rails;
 
 Critérios: 
 TUDO, absolutamente TUDO, será olhado (sim, teremos carinho pelo seu tempo gasto e olharemos com destreza seu teste); Esse teste é backend, então, pesará muito como você realizou; Frontend é opcional para o seu caso, mas, irá contar muito positivo como você fará; Ver seu teste rodando em modo produção conta MUITO. Fica ao seu critério se faz e em qual plataforma; Lembre-se que o melhor de um profissional é sua atitude quanto a resolução de problemas. Interprete este item como desejar ;) 
+
+### Pontos de melhoria
+Por se tratar de um projeto com curto espaço de tempo de desenvolvimento, muitas features tiveram de postergar implementação e/ou detalhamento.
+
+As seguintes melhorias e refinamentos ficaram por fazer:
+- Utilização do Docker para automatização do projeto;
+- Implementação de testes para as features;
+- Implementação do twilio-ruby para envio dos SMS durante a criação e alteração do munícipe;
+- Configuração do ActionMailer para envio de email durante a criação e alteração do munícipe;
+- Validação do Código do IBGE no model de Address;
+- Melhorias no front-end, em especial do formulário de cadastro/edição de munícipe e responsividade;
 
 ## Setup project
 
